@@ -1,0 +1,35 @@
+Name:                honk
+Version:             1.0.0
+Synopsis:            Cross-platform interface to the PC speaker.
+Homepage:            https://github.com/chrisyco/honk
+License:             OtherLicense
+License-File:        LICENSE
+Author:              Chris Wong
+Maintainer:          chrisyco@gmail.com
+Category:            Sound
+Build-Type:          Simple
+Extra-Source-Files:  README.md
+Cabal-Version:       >= 1.6
+
+Description:
+    A unified, cross-platform interface to the PC speaker.
+    .
+    Beep to your heart's content!
+
+Library
+    Exposed-Modules:
+        Sound.Honk
+        Sound.Honk.Types
+        Sound.Honk.Internal
+
+    Build-Depends:    base == 4.*
+
+    if os(windows)
+        C-Sources:    cbits/honk-windows.c
+        CPP-Options:  -DWINDOWS
+    else
+        C-Sources:    cbits/honk-unix.c
+        CPP-Options:  -DUNIX
+
+    Include-Dirs:     include
+    Includes:         honk.h
