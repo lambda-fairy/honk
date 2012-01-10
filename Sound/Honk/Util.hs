@@ -6,20 +6,29 @@
 -- Maintainer  : chrisyco@gmail.com
 -- Portability : portable
 --
--- Utilities for converting frequencies to and from MIDI note values.
+-- Random utility functions
 
 module Sound.Honk.Util
     (
-    -- * Conversion functions
+    -- * Conversions
       freqToMidi
     , midiToFreq
+
+    -- * Combinators
+    , loop
     ) where
 
+-- | Convert a frequency to a MIDI note value.
 freqToMidi :: Floating a => a -> a
 freqToMidi n = 69 + 12 * log2 (n / 440)
 
+-- | Convert a MIDI note value to a frequency.
 midiToFreq :: Floating a => a -> a
 midiToFreq n = 440 * 2 ** ((n - 69) / 12)
 
 log2 :: Floating a => a -> a
 log2 = logBase 2
+
+-- | Repeat a sequence a specified number of times.
+loop :: Int -> [a] -> [a]
+loop n = concat . take n . repeat
