@@ -48,10 +48,10 @@ beepOpen = BeepFd <$> throwErrnoIfMinus1 "beepOpen" c_beepOpen
 
 -- | Perform a beep.
 beepDo :: BeepFd -- ^ A console handle, as returned by 'beepOpen'
-       -> Double -- ^ Frequency of the beep, in hertz
        -> Double -- ^ Duration, in seconds
+       -> Double -- ^ Frequency of the beep, in hertz
        -> IO ()
-beepDo (BeepFd fd) freq dur =
+beepDo (BeepFd fd) dur freq =
     throwErrnoIfMinus1_ "beepDo" $
         c_beepDo fd (realToFrac freq) (realToFrac dur)
 

@@ -12,7 +12,7 @@
 --
 -- Here's an example:
 --
--- > simpleBeep = playNote $ Note 440 1.0
+-- > simpleBeep = playNote $ Note 1.0 440
 
 module Sound.Honk
     (
@@ -44,4 +44,4 @@ playNote = playNotes . (:[])
 playNotes :: Foldable t => t Note -> IO ()
 playNotes notes = withBeepFd run
     where
-        run handle = mapM_ (\(Note freq dur) -> beepDo handle freq dur) notes
+        run handle = mapM_ (\(Note dur freq) -> beepDo handle dur freq) notes

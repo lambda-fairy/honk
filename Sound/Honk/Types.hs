@@ -6,16 +6,18 @@
 -- Maintainer  : chrisyco@gmail.com
 -- Portability : portable
 --
--- Datatypes used by Honk.
+-- Data types used by Honk.
 
 module Sound.Honk.Types
     ( Note(..)
-    , Frequency
     , Duration
+    , Frequency
     ) where
 
-type Frequency = Double
 type Duration = Double
+type Frequency = Double
 
-data Note = Note { frequency :: Frequency, duration :: Duration }
+-- | Represents a single note, with a duration in seconds and a
+-- frequency in hertz.
+data Note = Note { duration :: Duration, frequency :: Frequency }
     deriving (Eq, Ord, Show)
