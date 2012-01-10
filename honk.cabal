@@ -21,6 +21,7 @@ Library
         Sound.Honk
         Sound.Honk.Types
         Sound.Honk.Internal
+        Sound.Honk.Util
 
     Build-Depends:    base == 4.*
 

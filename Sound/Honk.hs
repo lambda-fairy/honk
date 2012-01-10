@@ -22,6 +22,9 @@ module Sound.Honk
     -- * Output
     , playNote
     , playNotes
+
+    -- * Utility functions
+    , module Sound.Honk.Util
     ) where
 
 import Prelude hiding ( mapM_ )
@@ -29,6 +32,7 @@ import Data.Foldable ( Foldable, mapM_ )
 
 import Sound.Honk.Internal
 import Sound.Honk.Types
+import Sound.Honk.Util
 
 -- | Play a note.
 --
