@@ -13,6 +13,8 @@
 -- Here's an example:
 --
 -- > simpleBeep = playNote $ Note 1.0 440
+--
+-- For more examples, see the readme.
 
 module Sound.Honk
     (

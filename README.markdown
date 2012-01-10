@@ -11,15 +11,17 @@ An example is worth a thousand words, so here's a three thousand word essay:
 ```haskell
 import Sound.Honk
 
-beepOnce = playNote $ Note 440 1 -- 440 Hz for 1 second
+beepOnce = playNote $ Note 1.0 440 -- 440 Hz for 1 second
 
-beepMany = playNotes $ [Note 261.6 0.5, Note 329.6 0.5, Note 392.0 0.5,
-                        Note 532.3 1.5]
+airport = playNotes $ [Note 0.5 261.6, Note 0.5 329.6, Note 0.5 392.0,
+                        Note 1.5 532.3]
 
-infiniteLoop = playNotes $ cycle [Note 440 1, Note 0 1]
+connectionLost = playNotes $ concat $ take 5 $ repeat [Note 1 440, Note 1 0]
+
+glissando = playNotes $ map (Note 0.01) $ map midiToFreq [30,30.05..120]
 ```
 
-`Note` has two fields: the *frequency* in hertz, and the *duration* in seconds.
+`Note` has two fields: the *duration* in seconds, and the *frequency* in hertz.
 There is a very helpful [table of frequencies][Frequency table] that you can use
 to find the right value.
 
