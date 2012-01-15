@@ -8,7 +8,7 @@ Author:              Chris Wong
 Maintainer:          chrisyco@gmail.com
 Category:            Sound
 Build-Type:          Simple
-Extra-Source-Files:  README.md
+Extra-Source-Files:  README.markdown
 Cabal-Version:       >= 1.6
 
 Description:
