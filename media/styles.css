@@ -1,0 +1,41 @@
+@import url(museo500.css);
+@import url(screen.css) screen, projection;
+@import url(print.css) print;
+
+body {
+  font-family: Ubuntu, Verdana, sans-serif;
+  font-size: 112.5%;
+  line-height: 150%;
+  margin: 0;
+  padding: 0;
+}
+
+address, article, aside, blockquote, dl, fieldset, form, hr, ol, p, pre, table, ul {
+  margin: 1em 0;
+}
+
+h1, h2 {
+  font-family: 'Museo500';
+  font-weight: normal;
+  text-transform: lowercase;
+}
+
+#main pre {
+  margin-left: 1em;
+  border-left: 3px solid #0af;
+  padding-left: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: #f30;
+}
+
+footer {
+  font-size: 50%;
+  margin-top: 8em;
+}
+
+footer img {
+  vertical-align: middle;
+}

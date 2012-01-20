@@ -1,0 +1,13 @@
+/* A font by Jos Buivenga (exljbris) -> http://www.exljbris.com */
+
+@font-face {
+  font-family: 'Museo500';
+  font-weight: normal;
+  font-style: normal;
+  src: url('Museo500-Regular-webfont.eot');
+  src: local("☺"),
+    url('Museo500-Regular-webfont.woff') format('woff'),
+    url('Museo500-Regular-webfont.ttf') format('truetype'),
+    url('Museo500-Regular-webfont.svg#Museo500') format('svg');
+}
+

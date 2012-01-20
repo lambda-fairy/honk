@@ -1,0 +1,11 @@
+#main a:link {
+  color: black;
+}
+
+#main a[href^='http://']:after {
+  content: ' (' attr(href) ')';
+}
+
+#main a[href^='//']:after {
+  content: ' (' attr(href) ')';
+}

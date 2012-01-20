@@ -1,0 +1,30 @@
+div#container {
+  position: relative;
+  max-width: 32em;
+  margin: 0 auto;
+  padding: 1em;
+  border-left: 1px solid #aaa;
+}
+
+header h1 {
+  color: #f30;
+  font-size: 500%;
+  line-height: 100%;
+  text-indent: -0.5em;
+  margin: 0;
+}
+
+header h1 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header h2 {
+  font-size: 250%;
+  margin: -0.5em 0 1em;
+}
+
+#main h2 {
+  text-indent: -1em;
+  margin: 2em 0 1em;
+}
