@@ -15,7 +15,7 @@ address, article, aside, blockquote, dl, fieldset, form, hr, ol, p, pre, table, 
 }
 
 h1, h2 {
-  font-family: 'Museo500';
+  font-family: 'Museo500', 'Trebuchet MS', sans-serif;
   font-weight: normal;
   text-transform: lowercase;
 }
