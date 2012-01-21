@@ -11,7 +11,7 @@ names.
 
 By the way, I welcome [additions] to this page!
 
-[additions]: https://github.com/chrisyco/blob/gh-pages/examples/index.markdown
+[additions]: https://github.com/chrisyco/honk/blob/gh-pages/examples/index.markdown
 
     > beepOnce = playNote $ Note 1.0 440 -- 440 Hz for 1 second
 
