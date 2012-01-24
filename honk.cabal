@@ -34,3 +34,4 @@ Library
 
     Include-Dirs:     include
     Includes:         honk.h
+    Install-Includes: honk.h
