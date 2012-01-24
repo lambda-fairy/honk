@@ -20,14 +20,11 @@
 #  error This file can only be used on POSIX-compatible systems.
 #endif
 
-#include <stdio.h>
 #include <math.h>
 #include <unistd.h>
 #include <fcntl.h>
 #include <time.h>
 #include <sys/ioctl.h>
-#include <sys/stat.h>
-#include <sys/types.h>
 
 #if defined(__linux__)
 #  include <linux/kd.h>
@@ -42,10 +39,6 @@
 
 #define CLOCK_TICK_RATE  1193180
 #define freq_to_ticks(x) ((int)(CLOCK_TICK_RATE/(x)))
-
-#define TRY(x)      if ((x) < 0) FAIL
-#define END         return (handle)
-#define FAIL        return -1
 
 /* Sleep for a specified duration in seconds. */
 int dsleep(double len);

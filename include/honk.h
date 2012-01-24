@@ -24,6 +24,13 @@
 typedef int handle_t;
 
 /**
+ * Random macros
+ */
+#define TRY(x)      if ((x) < 0) FAIL
+#define END         return (handle)
+#define FAIL        return -1
+
+/**
  * Initialize the beep system, returning a handle to the console on
  * success or -1 on an error.
  */

@@ -22,14 +22,32 @@
 
 #include <windows.h>
 
+/**
+ * Windows doesn't need a handle to the console,
+ * so we just use an arbitrary value instead
+ */
+static const int default_handle = 42;
+
 int
-beep_do(double freq, double len)
-{
+beep_open() {
+    return default_handle;
+    }
+
+int
+beep_do(handle_t handle, double freq, double len) {
+    /* Check the user passed in the same handle we gave them earlier */
+    if (handle != default_handle)
+        FAIL;
+
+    /* Perform the beep */
     Beep((DWORD) freq, (DWORD) (len * 1000));
-}
+
+    /* Return the handle */
+    return handle;
+    }
 
 void
-beep_cleanup()
-{
+beep_close(handle_t handle) {
+    /* Turn off the speaker, if it is running */
     Beep(0, 0);
-}
+    }
