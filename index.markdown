@@ -30,10 +30,10 @@ Quick Start
 Develop
 -------
 
-The source code is hosted at [Github][]. Feel free to fork!
+The source code is hosted at [GitHub][]. Feel free to fork!
 
 
 [PC speaker]: http://en.wikipedia.org/wiki/PC_speaker
 [Haskell]: http://haskell.org/
 [MSDN Beep]: http://msdn.microsoft.com/en-us/library/windows/desktop/ms679277(v=vs.85).aspx
-[GitHub]: https://github.com/chrisyco/honk
+[GitHub]: https://github.com/lfairy/honk
