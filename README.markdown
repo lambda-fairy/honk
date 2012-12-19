@@ -26,5 +26,5 @@ Developing
 The source code is hosted at [Github][]. Feel free to fork!
 
 
-[website]: http://chrisyco.github.com/honk
-[GitHub]: https://github.com/chrisyco/honk
+[website]: http://lfairy.github.com/honk
+[GitHub]: https://github.com/lfairy/honk
