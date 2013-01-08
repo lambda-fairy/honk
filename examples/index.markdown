@@ -9,7 +9,7 @@ This is a literate Haskell file. To run it, simply paste this in a `.lhs` file
 and load it up in GHCi. You can then play each of these by typing in their
 names.
 
-By the way, I welcome [additions] to this page!
+By the way, I welcome [additions][] to this page!
 
 [additions]: https://github.com/lfairy/honk/blob/gh-pages/examples/index.markdown
 
