@@ -1,11 +1,11 @@
 Name:                honk
 Version:             1.1.1.2
 Synopsis:            Cross-platform interface to the PC speaker.
-Homepage:            https://github.com/chrisyco/honk
+Homepage:            https://lfairy.github.com/honk
 License:             OtherLicense
 License-File:        LICENSE
 Author:              Chris Wong
-Maintainer:          chrisyco@gmail.com
+Maintainer:          lambda.fairy@gmail.com
 Category:            Sound
 Build-Type:          Simple
 Extra-Source-Files:  README.markdown
@@ -35,3 +35,7 @@ Library
     Include-Dirs:     include
     Includes:         honk.h
     Install-Includes: honk.h
+
+Source-Repository head
+    Type: git
+    Location: https://github.com/lfairy/honk.git
