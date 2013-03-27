@@ -15,33 +15,17 @@
  */
 
 /**
- * A handle to the console.
- *
- * All methods except beep_init require a valid non-negative handle as
- * their first argument. A negative return value from these functions
- * indicates an error.
- */
-typedef int handle_t;
-
-/**
- * Random macros
- */
-#define TRY(x)      if ((x) < 0) FAIL
-#define END         return (handle)
-#define FAIL        return -1
-
-/**
  * Initialize the beep system, returning a handle to the console on
  * success or -1 on an error.
  */
-handle_t beep_open(void);
+int beep_open(void);
 
 /**
  * Perform a beep.
  */
-handle_t beep_do(handle_t handle, double freq, double len);
+int beep_do(int handle, double freq, double len);
 
 /**
  * Close the handle, stopping the speaker if running.
  */
-void beep_close(handle_t handle);
+void beep_close(int handle);

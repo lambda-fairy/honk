@@ -34,10 +34,10 @@ beep_open() {
     }
 
 int
-beep_do(handle_t handle, double freq, double len) {
+beep_do(int handle, double freq, double len) {
     /* Check the user passed in the same handle we gave them earlier */
     if (handle != default_handle)
-        FAIL;
+        return -1;
 
     /* Perform the beep */
     Beep((DWORD) freq, (DWORD) (len * 1000));
@@ -47,7 +47,7 @@ beep_do(handle_t handle, double freq, double len) {
     }
 
 void
-beep_close(handle_t handle) {
+beep_close(int handle) {
     /* Turn off the speaker, if it is running */
     Beep(0, 0);
     }

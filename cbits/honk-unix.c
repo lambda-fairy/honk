@@ -39,6 +39,7 @@
 
 #define CLOCK_TICK_RATE  1193180
 #define freq_to_ticks(x) ((int)(CLOCK_TICK_RATE/(x)))
+#define TRY(x) if (x < 0) return -1
 
 /* Sleep for a specified duration in seconds. */
 int dsleep(double len);
@@ -65,8 +66,9 @@ beep_do(const int handle, const double freq, const double len) {
     /* Stop the speaker by giving it a period of 0 */
     TRY( ioctl(handle, KIOCSOUND, 0) );
 
-    END;
+    return handle;
     }
+
 
 void
 beep_close(const int handle) {
@@ -76,6 +78,7 @@ beep_close(const int handle) {
     /* Then close the fd */
     close(handle);
     }
+
 
 int
 dsleep(const double len) {
