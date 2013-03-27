@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include "honk-windows.h"
+#include "honk.h"
 
 #if !(defined(_WIN32))
 #  error This file can only be used on Microsoft Windows systems.
