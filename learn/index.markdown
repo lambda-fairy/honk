@@ -25,7 +25,7 @@ Now run it:
 
 You should hear a nice long beep coming from inside your computer.
 
-Try changing the "440" to other numbers. What does it sound like? If you're more
+Try changing the "440" to other numbers. How does it sound? If you're more
 musically inclined, there is a very helpful [table of frequencies][] you can use
 to find the right number. It's impossible to break anything, so feel free to
 experiment.
@@ -38,8 +38,8 @@ If you use Linux, you'll probably get this message:
 
     *** Exception: beepDo: permission denied (Operation not permitted)
 
-This is because under Linux, presumably to stop randoms from messing with your
-computer, only the root user can control the PC speaker.
+This is because under Linux, for security reasons, only the root user can
+control the PC speaker.
 
 To fix this problem, just run it under `sudo`. For example, you would run the
 above example like so:
