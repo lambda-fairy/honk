@@ -13,14 +13,14 @@ By the way, I welcome [additions][] to this page!
 
 [additions]: https://github.com/lfairy/honk/blob/gh-pages/examples/index.markdown
 
-    > beepOnce = playNote $ Note 1.0 440 -- 440 Hz for 1 second
+    > beepOnce = playOne $ Note 1.0 440 -- 440 Hz for 1 second
 
-    > airport = playNotes $ [Note 0.5 261.6, Note 0.5 329.6, Note 0.5 392.0,
-    >                        Note 1.5 532.3]
+    > airport = play $ [Note 0.5 261.6, Note 0.5 329.6, Note 0.5 392.0,
+    >                   Note 1.5 532.3]
 
-    > connectionLost = playNotes $ loop 5 $ [Note 1 440, Note 1 0]
+    > connectionLost = play $ loop 5 $ [Note 1 440, Note 1 0]
 
-    > glissando = playNotes $ map (Note 0.01) $ map midiToFreq [30,30.05..120]
+    > glissando = play $ map (Note 0.01) $ map midiToFreq [30,30.05..120]
 
 My favorite one&mdash;once you try this, you'll understand why:
 

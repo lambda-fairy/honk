@@ -11,13 +11,13 @@ First steps
 -----------
 
 The basic unit in Honk is the `Note`. A note has a duration and a frequency. You
-play the note using the aptly named `playNote` function.
+play the note using the `playOne` function.
 
 To start off, we'll create a program that beeps an *A* for one second. Type the
 following code your favorite text editor and save it as "OneBeep.hs":
 
     import Sound.Honk
-    main = playNote (Note 1 440)
+    main = playOne (Note 1 440)
 
 Now run it:
 
@@ -51,14 +51,14 @@ Creating a melody
 -----------------
 
 Of course, most music consists of more than one note. Fortunately, Honk's
-incredibly well thought out design allows for this using the `playNotes`
-function (note the extra `s`).
+incredibly well thought out design allows for this using the `play`
+function.
 
 Save the following code in a file named "Airport.hs":
 
     import Sound.Honk
-    main = playNotes [ Note 0.5 261.6, Note 0.5 329.6, Note 0.5 392.0
-                     , Note 1.5 532.3 ]
+    main = play [ Note 0.5 261.6, Note 0.5 329.6, Note 0.5 392.0
+                , Note 1.5 532.3 ]
 
 
 The end of the beginning
