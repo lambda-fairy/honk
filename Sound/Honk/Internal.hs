@@ -7,16 +7,7 @@
 {-# LANGUAGE InterruptibleFFI #-}
 #endif
 
--- |
--- Module      : Sound.Honk.Internal
--- Copyright   : (C) 2011 Chris Wong
--- License     : Apache License 2.0
---
--- Maintainer  : chrisyco@gmail.com
--- Portability : non-portable (requires POSIX or Win32)
---
--- Low level FFI interface. You should never need to use this directly.
-
+-- | Low level FFI interface. You should never need to use this directly.
 
 module Sound.Honk.Internal
     (
@@ -32,9 +23,9 @@ module Sound.Honk.Internal
     , withBeepFd
     ) where
 
-import Control.Applicative ( (<$>) )
-import Control.Exception.Base ( bracket )
-import Foreign.C ( throwErrnoIfMinus1, throwErrnoIfMinus1_ )
+import Control.Applicative ((<$>))
+import Control.Exception (bracket)
+import Foreign.C (throwErrnoIfMinus1, throwErrnoIfMinus1_)
 import Foreign.C.Types
 
 newtype BeepFd = BeepFd CInt
@@ -47,9 +38,9 @@ beepOpen :: IO BeepFd
 beepOpen = BeepFd <$> throwErrnoIfMinus1 "beepOpen" c_beepOpen
 
 -- | Perform a beep.
-beepDo :: BeepFd -- ^ A console handle, as returned by 'beepOpen'
-       -> Double -- ^ Duration, in seconds
-       -> Double -- ^ Frequency of the beep, in hertz
+beepDo :: BeepFd   -- ^ A console handle, as returned by 'beepOpen'
+       -> Rational -- ^ Duration, in seconds
+       -> Double   -- ^ Frequency of the beep, in hertz
        -> IO ()
 beepDo (BeepFd fd) dur freq =
     throwErrnoIfMinus1_ "beepDo" $

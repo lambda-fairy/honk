@@ -1,21 +1,14 @@
--- |
--- Module      : Sound.Honk.Util
--- Copyright   : (C) 2011 Chris Wong
--- License     : Apache License 2.0
---
--- Maintainer  : chrisyco@gmail.com
--- Portability : portable
---
--- Random utility functions
+-- | Random utility functions.
 
 module Sound.Honk.Util
     (
-    -- * Conversions
+      -- * Conversions
       freqToMidi
     , midiToFreq
 
-    -- * Combinators
+      -- * Combinators
     , loop
+
     ) where
 
 -- | Convert a frequency to a MIDI note value.
@@ -31,4 +24,4 @@ log2 = logBase 2
 
 -- | Repeat a sequence a specified number of times.
 loop :: Int -> [a] -> [a]
-loop n = concat . take n . repeat
+loop n = concat . replicate n
