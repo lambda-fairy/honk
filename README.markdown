@@ -15,7 +15,7 @@ See the [website][] for more info.
 Building
 --------
 
-    git clone git://github.com/chrisyco/honk.git
+    git clone https://github.com/lfairy/honk.git
     cd honk
     cabal build
 
@@ -26,5 +26,5 @@ Developing
 The source code is hosted at [Github][]. Feel free to fork!
 
 
-[website]: http://lfairy.github.com/honk
+[website]: http://lfairy.github.io/honk/
 [GitHub]: https://github.com/lfairy/honk
