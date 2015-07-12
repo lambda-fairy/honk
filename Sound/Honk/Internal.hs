@@ -1,11 +1,4 @@
-{-# LANGUAGE CPP, ForeignFunctionInterface #-}
-
-#if __GLASGOW_HASKELL__ < 701
--- Not available prior to GHC 7.1
-#  define interruptible safe
-#else
-{-# LANGUAGE InterruptibleFFI #-}
-#endif
+{-# LANGUAGE CPP, ForeignFunctionInterface, InterruptibleFFI #-}
 
 -- | Low level FFI interface. You should rarely need to use this directly.
 
@@ -23,10 +16,11 @@ module Sound.Honk.Internal
     , withBeepFd
     ) where
 
-import Control.Applicative ((<$>))
+import Control.Applicative
 import Control.Exception (bracket)
 import Foreign.C (throwErrnoIfMinus1, throwErrnoIfMinus1_)
 import Foreign.C.Types
+import Prelude  -- GHC 7.10
 
 newtype BeepFd = BeepFd CInt
 
