@@ -8,12 +8,12 @@
 
 module Sound.Honk
     (
-    -- * Types
-      module Sound.Honk.Types
-
     -- * Output
-    , play
+      play
     , playOne
+
+    -- * Types
+    , module Sound.Honk.Types
 
     -- * Utility functions
     , module Sound.Honk.Util

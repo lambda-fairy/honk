@@ -1,14 +1,9 @@
--- | Random utility functions.
+-- | Miscellaneous utility functions.
 
 module Sound.Honk.Util
-    (
-      -- * Conversions
-      freqToMidi
+    ( freqToMidi
     , midiToFreq
-
-      -- * Combinators
     , loop
-
     ) where
 
 -- | Convert a frequency to a MIDI note value.

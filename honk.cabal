@@ -1,15 +1,15 @@
 Name:                honk
 Version:             1.2.0.0
 Synopsis:            Cross-platform interface to the PC speaker.
-Homepage:            http://lfairy.github.io/honk/
-License:             OtherLicense
+Homepage:            https://lambda.xyz/honk/
+License:             Apache-2.0
 License-File:        LICENSE
 Author:              Chris Wong
 Maintainer:          lambda.fairy@gmail.com
 Category:            Sound
 Build-Type:          Simple
 Extra-Source-Files:  README.markdown
-Cabal-Version:       >= 1.6
+Cabal-Version:       >= 1.10
 
 Description:
     A unified, cross-platform interface to the PC speaker.
@@ -19,8 +19,10 @@ Description:
 Library
     Exposed-Modules:
         Sound.Honk
-        Sound.Honk.Types
         Sound.Honk.Internal
+
+    Other-Modules:
+        Sound.Honk.Types
         Sound.Honk.Util
 
     Build-Depends:    base == 4.*
@@ -35,6 +37,9 @@ Library
     Include-Dirs:     include
     Includes:         honk.h
     Install-Includes: honk.h
+
+    GHC-Options:      -Wall
+    Default-Language: Haskell2010
 
 Source-Repository head
     Type: git

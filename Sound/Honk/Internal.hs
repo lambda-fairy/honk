@@ -7,7 +7,7 @@
 {-# LANGUAGE InterruptibleFFI #-}
 #endif
 
--- | Low level FFI interface. You should never need to use this directly.
+-- | Low level FFI interface. You should rarely need to use this directly.
 
 module Sound.Honk.Internal
     (
