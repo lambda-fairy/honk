@@ -23,7 +23,7 @@ Building
 Developing
 ----------
 
-The source code is hosted at [Github][]. Feel free to fork!
+The source code is hosted at [GitHub][]. Feel free to fork!
 
 
 [website]: http://lfairy.github.io/honk/
